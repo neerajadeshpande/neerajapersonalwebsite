@@ -278,11 +278,27 @@ p { margin: 0 0 20px; }
   width: 100%;
   max-width: 620px;
   display: block;
-  margin: 0 auto 32px;
+  margin: 0 auto 10px;
   filter: grayscale(100%) contrast(1.02) brightness(1.1);
   mix-blend-mode: multiply;
   -webkit-mask-image: radial-gradient(ellipse 72% 78% at center, #000 55%, transparent 100%);
   mask-image: radial-gradient(ellipse 72% 78% at center, #000 55%, transparent 100%);
+}
+
+.photo-credit {
+  text-align: center;
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--rose-500);
+  margin: 0 0 32px;
+}
+
+.photo-credit a {
+  color: var(--rose-500);
+}
+
+.photo-credit a:hover {
+  color: var(--rose-950);
 }
 
 .byline-note {
