@@ -155,6 +155,18 @@ nav.site-nav a.active {
   border-bottom-color: var(--rose-400);
 }
 
+@media (max-width: 560px) {
+  nav.site-nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+  }
+
+  nav.site-nav li:not(:last-child)::after {
+    display: none;
+  }
+}
+
 main {
   padding: 56px 0 80px;
 }
