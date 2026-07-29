@@ -16,6 +16,16 @@
 
 * { box-sizing: border-box; }
 
+::selection {
+  background: var(--rose-400);
+  color: var(--blush-50);
+}
+
+::-moz-selection {
+  background: var(--rose-400);
+  color: var(--blush-50);
+}
+
 html {
   scroll-behavior: smooth;
   height: 100%;
@@ -286,6 +296,46 @@ p { margin: 0 0 20px; }
   font-size: 1.4rem;
 }
 
+.tab-toggle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin: 0 0 36px;
+}
+
+.tab-toggle-btn {
+  font-family: 'Source Serif 4', serif;
+  font-size: 1.4rem;
+  font-style: italic;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  padding: 0;
+  border: none;
+  background: none;
+  color: var(--rose-700);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 4px;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.tab-toggle-btn.active {
+  color: var(--rose-950);
+  font-weight: 600;
+  text-decoration-color: var(--rose-400);
+}
+
+.tab-toggle-btn:not(.active):hover {
+  color: var(--rose-950);
+}
+
+.tab-toggle-divider {
+  color: var(--rose-200);
+  font-size: 1.4rem;
+}
+
 .portrait {
   width: 100%;
   max-width: 620px;
@@ -424,6 +474,12 @@ form.contact-form label {
   font-size: 0.9rem;
   color: var(--rose-800);
   margin: 18px 0 6px;
+}
+
+.required-tag {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--rose-700);
 }
 
 form.contact-form input,
